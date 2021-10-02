@@ -5,6 +5,7 @@ import Line from "./Line";
 import Wave from "./Wave";
 import Triangle from "./Triangle";
 import SemiCircle from "./SemiCircle";
+import Cube from "./Cube";
 
 /**
  *
@@ -30,7 +31,8 @@ class SBackgroundCreator {
 
         const potentialShapes = [
             'Rectangle',
-            'Circle'
+            'Circle',
+            'Cube'
         ];
 
         for (let i = 0; i < this.numShapes; i++) {
@@ -46,6 +48,7 @@ class SBackgroundCreator {
                 case 'Wave': shape = new Wave(); break;
                 case 'Triangle': shape = new Triangle(); break;
                 case 'SemiCircle': shape = new SemiCircle(); break;
+                case 'Cube': shape = new Cube(); break;
             }
 
             shape.init(this.canvasEl);
