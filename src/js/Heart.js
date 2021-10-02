@@ -18,8 +18,9 @@ class Heart {
     }
 
     init(canvas) {
-        this.x = randomPosition(0,canvas.width);
-        this.y = randomPosition(0,canvas.height);
+        /** add 0.5, so the line from top of the screen is not drawn */
+        this.x = Math.floor(randomPosition(0,canvas.width)) + 0.5;
+        this.y = Math.floor(randomPosition(0,canvas.height)) + 0.5;
         this.fillColor = randomColor();
     }
 
