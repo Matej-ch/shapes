@@ -17,7 +17,6 @@ class Line {
         ctx.lineTo(this.dirX,this.dirY);
 
         ctx.stroke();
-
     }
 
     init(canvas) {
