@@ -1,8 +1,11 @@
 import SBackgroundCreator from "./js/SBackgroundCreator";
 
-
 window.onload = function () {
     const canvasEl = document.getElementById('canvas');
+    canvasEl.width = window.innerWidth;
+    canvasEl.height = window.innerHeight;
+
+    console.log(canvasEl);
     const bg = new SBackgroundCreator(canvasEl,{
         fillShape: true,
         numShapes: 20,
