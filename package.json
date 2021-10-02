@@ -1,6 +1,6 @@
 {
   "name": "bg_shapes",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Random shapes usable as background on page",
   "main": "src/index.js",
   "scripts": {
