@@ -7,7 +7,7 @@ class Circle {
                     rotation = 45 * Math.PI/180,
                     startAngle = 0,
                     endAngle =  2 * Math.PI,
-                    fillColor = randomColor} = {}) {
+                    fillColor = randomColor()} = {}) {
 
         this.x = x;
         this.y = y;
