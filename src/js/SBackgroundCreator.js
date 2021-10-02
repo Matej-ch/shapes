@@ -35,7 +35,8 @@ class SBackgroundCreator {
             'Cube',
             'Line',
             'Triangle'*/
-            'Wave'
+            /*'Wave'*/
+            'Heart'
         ];
 
         for (let i = 0; i < this.numShapes; i++) {
