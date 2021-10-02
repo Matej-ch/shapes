@@ -8,7 +8,11 @@ import SemiCircle from "./SemiCircle";
 import Cube from "./Cube";
 
 /**
+ * @param {HTMLElement} canvasEl canvas element
  *
+ * @param {Object} options object with options
+ *
+ * @constructor
  * */
 class SBackgroundCreator {
     constructor(canvasEl, {fillShape = true,numShapes = 10,alpha = true,bgColor = 'black',globalCompositeOperation = 'multiply'} = {}) {
@@ -24,11 +28,14 @@ class SBackgroundCreator {
 
         this.canvasEl.style.cssText = `background:${bgColor}`;
 
-        this.shapes = [];
+        this.initListeners();
     }
 
+    /**
+     * Initialize shapes and listeners
+     * */
     init() {
-
+        this.shapes = [];
         const potentialShapes = [
             'Rectangle',
             'Circle',
@@ -60,10 +67,11 @@ class SBackgroundCreator {
 
             this.shapes.push(shape);
         }
-
-        this.initListeners();
     }
 
+    /**
+     * Initialize listeners
+     * */
     initListeners() {
         window.addEventListener('resize', e => {
             if(this.canvasEl.width > window.innerWidth) {
@@ -77,9 +85,14 @@ class SBackgroundCreator {
             } else {
                 this.canvasEl.height = this.canvasH;
             }
+
+            this.init();
         })
     }
 
+    /**
+     * Draw shapes on canvas
+     * */
     draw() {
         requestAnimationFrame(() => this.draw());
         this.ctx.clearRect(0, 0, this.canvasW, this.canvasH);
