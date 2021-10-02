@@ -21,18 +21,6 @@ class Heart {
         this.x = randomPosition(0,canvas.width);
         this.y = randomPosition(0,canvas.height);
         this.fillColor = randomColor();
-
-        console.log('x0: ',this.x - 50);
-        console.log('y0: ',this.y);
-
-        console.log('x1: ',this.x - 50);
-        console.log('y1: ',this.y + 30);
-
-        console.log('x2: ',this.x);
-        console.log('y2: ',this.y + 35);
-
-        console.log('x3: ',this.x);
-        console.log('y3: ',this.y + 60);
     }
 
     drawCurve(ctx,x0, y0, x1, y1, x2, y2, x3, y3, color) {
