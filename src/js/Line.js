@@ -1,8 +1,12 @@
 import {randomColor, randomPosition} from "./helper";
 
 class Line {
-    constructor({x = 0,y= 0,dirX = 10,dirY = 10,fillColor = randomColor} ={}) {
-
+    constructor({x = 0,y= 0,dirX = 10,dirY = 10,fillColor = randomColor()} ={}) {
+        this.x = x;
+        this.y = y;
+        this.dirX = dirX;
+        this.dirY = dirY;
+        this.fillColor = fillColor;
     }
 
     draw(ctx,fillShape) {

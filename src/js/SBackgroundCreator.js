@@ -30,9 +30,11 @@ class SBackgroundCreator {
     init() {
 
         const potentialShapes = [
-            'Rectangle',
+            /*'Rectangle',
             'Circle',
-            'Cube'
+            'Cube',*/
+            /*'Line'*/
+            'Triangle'
         ];
 
         for (let i = 0; i < this.numShapes; i++) {

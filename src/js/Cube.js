@@ -3,7 +3,7 @@ import {randomColor, randomPosition} from "./helper";
 
 class Cube extends Rectangle {
 
-    constructor({x = 0,y = 0,width = 10,fillColor = randomColor} = {}) {
+    constructor({x = 0,y = 0,width = 10,fillColor = randomColor()} = {}) {
         super({x:x ,y:y,width: width,height: width,fillColor: fillColor});
     }
 
