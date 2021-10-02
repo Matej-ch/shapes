@@ -1,6 +1,6 @@
 import {randomColor} from "./helper";
 
-class SemiCircle {
+class Heart {
     constructor() {
 
     }
@@ -14,4 +14,4 @@ class SemiCircle {
     }
 }
 
-export default SemiCircle;
+export default Heart;

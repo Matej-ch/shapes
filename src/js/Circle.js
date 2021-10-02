@@ -1,4 +1,4 @@
-import {randomColor} from "./helper";
+import {randomColor, randomPosition} from "./helper";
 
 class Circle {
     constructor({x = 0,
@@ -17,6 +17,26 @@ class Circle {
         this.endAngle = endAngle;
         this.fillColor = fillColor;
 
+    }
+
+    draw(ctx,fillShape) {
+        ctx.beginPath();
+        ctx.fillStyle = ctx.strokeStyle = this.fillColor;
+
+        ctx.ellipse(this.x,this.y,this.radius,this.radius,this.rotation,this.startAngle,this.endAngle);
+
+        if(fillShape) {
+            ctx.fill();
+        } else {
+            ctx.stroke();
+        }
+    }
+
+    init(canvas) {
+        this.x = randomPosition(0,canvas.width);
+        this.y = randomPosition(0,canvas.height);
+        this.radius = randomPosition(18,90);
+        this.fillColor = randomColor();
     }
 }
 
