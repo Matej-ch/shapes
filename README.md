@@ -4,7 +4,9 @@ Shapes created with canvas, can be user as background on webpage
 
 ### Install
 
+``
 npm i bg_shapes --save
+``
 
 ### Usage
 
