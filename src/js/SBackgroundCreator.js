@@ -29,14 +29,8 @@ class SBackgroundCreator {
         this.canvasEl.style.cssText = `background:${bgColor}`;
 
         this.initListeners();
-    }
 
-    /**
-     * Initialize shapes and listeners
-     * */
-    init() {
-        this.shapes = [];
-        const potentialShapes = [
+        this.potentialShapes = [
             'Rectangle',
             'Circle',
             'Cube',
@@ -46,10 +40,17 @@ class SBackgroundCreator {
             'Heart',
             'SemiCircle'
         ];
+    }
+
+    /**
+     * Initialize shapes and listeners
+     * */
+    init() {
+        this.shapes = [];
 
         for (let i = 0; i < this.numShapes; i++) {
 
-            const shapeString = potentialShapes[Math.round(Math.random() * (potentialShapes.length - 1))];
+            const shapeString = this.potentialShapes[Math.round(Math.random() * (this.potentialShapes.length - 1))];
 
             let shape = new Circle();
             switch (shapeString) {
@@ -103,6 +104,25 @@ class SBackgroundCreator {
 
             shape.draw(this.ctx,this.fillShape);
         }
+    }
+
+    /**
+     * This function deactivate shapes given as string in array
+     *
+     * available values are 'Rectangle',
+     * 'Circle',
+     * 'Cube',
+     * 'Line',
+     * 'Triangle',
+     * 'Wave',
+     * 'Heart',
+     * 'SemiCircle'
+     *
+     * @param {Array<string>} shapes
+     * */
+    deactivateShapes(shapes) {
+
+        this.potentialShapes = this.potentialShapes.filter(shape => !shapes.includes(shape))
     }
 }
 
