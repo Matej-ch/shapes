@@ -1,8 +1,11 @@
 {
-  "name": "bg_shapes",
+  "name": "@mtjch/bg_shapes",
   "version": "1.0.0",
   "description": "Random shapes usable as background on page",
   "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "webpack serve",
     "watch": "webpack --watch",
