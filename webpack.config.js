@@ -1,4 +1,4 @@
-//const path = require('path')
+const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const mode = process.env.NODE_ENV === 'production' ? 'production' : "development";
@@ -6,11 +6,6 @@ const mode = process.env.NODE_ENV === 'production' ? 'production' : "development
 module.exports = {
     mode: mode,
     plugins: [new MiniCssExtractPlugin()],
-    //entry: './src/index.js', //not required
-    //output: {
-    //    filename: "bundle.js", //not required
-    //    path: path.resolve(__dirname,'public')
-    //},
     module: {
         rules: [
             {
@@ -32,6 +27,8 @@ module.exports = {
     devtool: 'source-map',
 
     devServer: {
-        contentBase: './dist'
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        }
     }
 }
