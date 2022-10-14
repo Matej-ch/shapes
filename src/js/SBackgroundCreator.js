@@ -23,8 +23,8 @@ class SBackgroundCreator {
         this.numShapes = numShapes;
         this.globalCompositeOperation = globalCompositeOperation;
 
-        this.canvasW = this.canvasEl.width;
-        this.canvasH = this.canvasEl.height;
+        this.canvasW = window.innerWidth;
+        this.canvasH = window.innerHeight;
 
         this.canvasEl.style.cssText = `background:${bgColor}`;
 
