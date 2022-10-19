@@ -95,7 +95,6 @@ class SBackgroundCreator {
      * Draw shapes on canvas
      * */
     draw() {
-        requestAnimationFrame(() => this.draw());
         this.ctx.clearRect(0, 0, this.canvasW, this.canvasH);
         this.ctx.globalCompositeOperation = this.globalCompositeOperation;
 
